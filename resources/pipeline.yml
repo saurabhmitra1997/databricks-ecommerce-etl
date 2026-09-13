@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    ecommerce_etl_pipeline:
+      name: Ecommerce_ETL_Pip
+
+      libraries:
+        - glob:
+            include: ../src/ecommerce_pipeline.py
+
+      schema: default
+      catalog: workspace
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      serverless: true

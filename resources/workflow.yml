@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    ecommerce_etl_workflow:
+      name: Ecommerce_ETL_Workflow
+
+      tasks:
+        - task_key: Run_Ecommerce_Pipeline_Flow
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.ecommerce_etl_pipeline.id}
+            full_refresh: false
+
+        - task_key: Validate_Ecommerce_Data_Flow
+          depends_on:
+            - task_key: Run_Ecommerce_Pipeline_Flow
+          notebook_task:
+            notebook_path: ../notebooks/Validate_Ecommerce_Data.py
+
+      queue:
+        enabled: true
+
+      performance_target: PERFORMANCE_OPTIMIZED
