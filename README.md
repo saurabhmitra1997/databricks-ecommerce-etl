@@ -200,7 +200,7 @@ The pipeline graph shows the Bronze → Silver → Gold dependency structure and
 
 The workflow screenshot shows the successful execution of the pipeline task followed by the validation task.
 
-![Workflow Run](Screenshots/Workflow_Run.png)
+![Workflow Run](https://raw.githubusercontent.com/saurabhmitra1997/databricks-ecommerce-etl/main/Screenshots/Workflow_Run.png)
 
 ## Project Structure
 
