@@ -255,6 +255,12 @@ The pipeline can be extended with:
 - Monitoring and alerting
 - Git-based CI/CD deployment
 
+### Incremental Load Result
+
+The incremental pipeline processes newly arriving order files and updates the downstream Silver and Gold datasets.
+
+![Incremental Load Result](Screenshots/Incremental_Load_Result.png)
+
 ## Data Disclaimer
 
 This project uses synthetic/sample data created for learning and portfolio demonstration purposes.
