@@ -142,6 +142,21 @@ Validate Ecommerce Data
 
 The validation task runs only after the pipeline task succeeds.
 
+## Incremental Data Ingestion
+
+The project also includes an incremental ingestion pipeline using Databricks Auto Loader.
+
+New CSV files arriving in the source volume are detected using:
+
+- `spark.readStream`
+- `cloudFiles`
+- Schema inference
+- Bronze → Silver → Gold processing
+- Data cleansing and deduplication
+- Incremental Gold aggregation
+
+Implementation: [`src/incremental_pipeline.py`](src/incremental_pipeline.py)
+
 ## Data Quality Validation
 
 The validation notebook performs the following checks:
